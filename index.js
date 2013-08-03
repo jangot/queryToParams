@@ -1,7 +1,15 @@
-/**
- * Created with JetBrains WebStorm.
- * User: jangot
- * Date: 03.08.13
- * Time: 17:06
- * To change this template use File | Settings | File Templates.
- */
+var parseQuery = require('./parseQuery');
+
+
+var URL = 'q=query+%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0&' +
+    'oq=query+%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0&' +
+    'aqs=chrome.0.69i57j69i62.3929j0&' +
+    'sourceid=chrome&' +
+    'ie=UTF-8' +
+    '&foo[]=2' +
+    '&foo[]=3';
+
+
+var params = parseQuery(URL);
+
+console.log(params);
